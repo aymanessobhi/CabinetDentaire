@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+   <children>
+      <Pane layoutX="14.0" layoutY="62.0" prefHeight="62.0" prefWidth="208.0" style="-fx-background-color: #8fbc8f;">
+         <children>
+            <Label layoutX="29.0" layoutY="18.0" text="Patients" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="25" />
+               </graphic>
+            </Label>
+            <Label fx:id="lbl_nbrPatient" layoutX="164.0" layoutY="18.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="241.0" layoutY="62.0" prefHeight="62.0" prefWidth="208.0" style="-fx-background-color: #8fbc8f;">
+         <children>
+            <Label layoutX="19.0" layoutY="19.0" text="Consultations" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" size="25" />
+               </graphic>
+            </Label>
+            <Label fx:id="lab_nbrCons" layoutX="171.0" layoutY="18.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="464.0" layoutY="62.0" prefHeight="62.0" prefWidth="196.0" style="-fx-background-color: #8fbc8f;">
+         <children>
+            <Label layoutX="24.0" layoutY="18.0" text="Dentists" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_MD" size="25" />
+               </graphic>
+            </Label>
+            <Label fx:id="lab_nbreDentist" layoutX="172.0" layoutY="18.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="677.0" layoutY="62.0" prefHeight="62.0" prefWidth="196.0" style="-fx-background-color: #8fbc8f;">
+         <children>
+            <Label layoutX="23.0" layoutY="18.0" text="RDV Actif" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_CHECK_ALT" size="25" />
+               </graphic>
+            </Label>
+            <Label fx:id="lab_rdvActif" layoutX="169.0" layoutY="18.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="table_patient" layoutX="23.0" layoutY="174.0" prefHeight="330.0" prefWidth="491.0">
+        <columns>
+          <TableColumn fx:id="tc_id" prefWidth="64.0" text="ID" />
+          <TableColumn fx:id="tc_nom" prefWidth="77.0" text="Nom" />
+            <TableColumn fx:id="tc_prenom" prefWidth="117.0" text="Prenom" />
+            <TableColumn fx:id="tc_sexe" prefWidth="106.0" text="sexe" />
+            <TableColumn fx:id="tc_age" minWidth="0.0" prefWidth="0.0" text="Age" />
+            <TableColumn fx:id="tc_tele" prefWidth="126.0" text="Tele" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="20.0" text="Tableau de bord">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="23.0" layoutY="140.0" prefHeight="27.0" prefWidth="491.0" style="-fx-background-color: #6e7e7a;">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" text="Les 12 nouveaux patients" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="table_rdv" layoutX="532.0" layoutY="174.0" prefHeight="330.0" prefWidth="343.0">
+        <columns>
+          <TableColumn fx:id="tc_rdv" prefWidth="75.0" text="ID RDV" />
+          <TableColumn fx:id="tc_patient" prefWidth="90.0" text="Patient" />
+            <TableColumn fx:id="tc_dentsit" prefWidth="88.0" text="Dentiste" />
+            <TableColumn fx:id="tc_time" prefWidth="89.0" text="Temp" />
+        </columns>
+      </TableView>
+      <Pane layoutX="532.0" layoutY="140.0" prefHeight="27.0" prefWidth="343.0" style="-fx-background-color: #6e7e7a;">
+         <children>
+            <Label layoutX="14.0" layoutY="4.0" text="Les RDVs Actif" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
